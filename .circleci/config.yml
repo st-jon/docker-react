@@ -11,6 +11,7 @@ jobs:
 
     steps:
       - checkout
+      - setup_remote_docker
       - run: docker build -t stjon/docker-react -f Dockerfile.dev .
       - run: docker run -e CI=true stjon/docker-react npm run test
       # # Specify service dependencies here if necessary
