@@ -10,9 +10,9 @@ jobs:
       - image: circleci/node:7.10
 
     steps:
+      - checkout
       run: 
         - apt-get install -y sudo
-        - checkout
       run: 
         - docker build -t stjon/docker-react -f Dockerfile.dev
       run:
